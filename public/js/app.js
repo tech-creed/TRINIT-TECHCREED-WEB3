@@ -220,4 +220,37 @@ App = {
         
         alert(data["skill"] + " Skill Added");
       },
+
+      AddProject: async()=>{
+        await App.load();
+        data = {};
+        const form = document.getElementById("AddProjectForm");
+
+        const formData = new FormData(form);
+
+        data["projectName"] = document.getElementById("projectName").value;
+        data["description"] = document.getElementById("description").value;
+
+        try {
+          const response = await fetch("/ipfs/project-upload", {
+            method: "POST",
+            body: formData,
+          });
+    
+          if (response.ok) {
+            const responseData = await response.json();
+            console.log("Response:", responseData);
+    
+            await App.contracts.portfolio.methods
+              .addProject(data["projectName"],data["description"],responseData.projectFileURL)
+              .send({ from: App.account });
+    
+            alert("Your project file Uploaded Successfully");
+          } else {
+            alert("Failed to submit form");
+          }
+        } catch (error) {
+          console.error("Error:", error);
+        }
+      }
 }

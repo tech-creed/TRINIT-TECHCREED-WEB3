@@ -7,5 +7,7 @@ router.use(fileUpload({useTempFiles: true}));
 
 router.post("/file-upload",ipfsController.ipfsUpload)
 router.post("/resume-upload",ipfsController.resumeUpload)
+router.post("/project-upload",ipfsController.ProjectFileUpload)
+
 
 module.exports = router;

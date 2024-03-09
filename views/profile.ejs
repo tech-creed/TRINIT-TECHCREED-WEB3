@@ -71,7 +71,7 @@
           </div>
           <div class="modal-body">
             <!-- Form inside modal -->
-            <form id="myForm" enctype="multipart/form-data">
+            <form id="AddProjectForm" onSubmit="App.AddProject(); return false;" enctype="multipart/form-data">
               <div class="form-group">
                 <label for="projectName">Project Name</label>
                 <input type="text" class="form-control" id="projectName" placeholder="Enter project name">
@@ -82,7 +82,9 @@
               </div>
               <div class="form-group">
                 <label for="projectFile">Project File</label>
-                <input type="file" class="form-control-file" id="projectFile">
+                <input type="hidden" id="name" name="ownerName" value="">
+                <input type="hidden" id="tokenIdForProjectDoc" name="tokenId" value="">
+                <input type="file" class="form-control-file" name="document" id="projectFile">
               </div>
               <button type="submit" class="btn btn-primary">Submit</button>
             </form>
@@ -113,7 +115,7 @@
               </div>
               <div class="form-group">
                 <label for="achievementFile">Achievement File</label>
-                <input type="file" class="form-control-file" id="achievementFile">
+                <input type="file" class="form-control-file" name="document" id="achievementFile">
               </div>
               <button type="submit" class="btn btn-primary">Submit</button>
             </form>
@@ -559,8 +561,8 @@
     document.getElementById('right-role').innerHTML = decodeURIComponent(cookies[1].split('=')[1])
     document.getElementById('right-email').innerHTML = decodeURIComponent(cookies[3].split('=')[1])
     document.getElementById('right-wallet').innerHTML = decodeURIComponent(cookies[0].split('=')[1])
-
-
+    document.getElementById('tokenId').value = decodeURIComponent(cookies[0].split('=')[1]).slice(2,11)
+    document.getElementById('tokenIdForProjectDoc').value = decodeURIComponent(cookies[0].split('=')[1]).slice(3,12)
     </script>
   </body>
 </html>
