@@ -12,4 +12,7 @@ router.get("/login",pageController.loginPage)
 router.get("/register",pageController.registerPage)
 
 
+router.get("/verification",pageController.verificationPage)
+
+
 module.exports = router
