@@ -30,6 +30,100 @@
     </style>
   </head>
   <body>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="skillModal" tabindex="-1" role="dialog" aria-labelledby="skillModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="skillModalLabel">Add Your Skill</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- Form inside modal -->
+            <form id="myForm">
+              <div class="form-group">
+                <label for="skill">Skill</label>
+                <input type="text" class="form-control" id="skill" placeholder="Enter skill" required>
+              </div>
+              <div class="form-group">
+                <label for="proficiency">Proficiency (%)</label>
+                <input type="number" class="form-control" id="proficiency" placeholder="Enter proficiency percentage" required>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="projectModal" tabindex="-1" role="dialog" aria-labelledby="projectModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="projectModalLabel">Add Your Projects</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- Form inside modal -->
+            <form id="myForm" enctype="multipart/form-data">
+              <div class="form-group">
+                <label for="projectName">Project Name</label>
+                <input type="text" class="form-control" id="projectName" placeholder="Enter project name">
+              </div>
+              <div class="form-group">
+                <label for="description">Description</label>
+                <textarea class="form-control" id="description" rows="3" placeholder="Enter project description"></textarea>
+              </div>
+              <div class="form-group">
+                <label for="projectFile">Project File</label>
+                <input type="file" class="form-control-file" id="projectFile">
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="achievementModal" tabindex="-1" role="dialog" aria-labelledby="achievementModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="achievementModalLabel">Add Your Achievement</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- Form inside modal -->
+            <form id="myForm" enctype="multipart/form-data">
+              <div class="form-group">
+                <label for="achievementName">Achievement Name</label>
+                <input type="text" class="form-control" id="achievementName" placeholder="Enter achievement name">
+              </div>
+              <div class="form-group">
+                <label for="description">Description</label>
+                <textarea class="form-control" id="description" rows="3" placeholder="Enter achievement description"></textarea>
+              </div>
+              <div class="form-group">
+                <label for="achievementFile">Achievement File</label>
+                <input type="file" class="form-control-file" id="achievementFile">
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    
     <div style="margin-top: 24px;" class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
         <a href="/dashboard" class="logo d-flex align-items-center">
@@ -55,7 +149,7 @@
       <div class="main-body">
 
         <div class="row gutters-sm">
-          <div class="col-md-4 mb-3">
+          <div class="col-md-6 mb-3">
             <div class="card">
               <div class="card-body">
                 <div class="d-flex flex-column align-items-center text-center">
@@ -65,13 +159,31 @@
                     class="rounded-circle"
                     width="150"
                   />
-                  <div class="mt-3">
+                  <div class="mt-4">
                     <h4>Full Name</h4>
                     <p class="text-secondary mb-1">Desgination</p>
                     <p class="text-muted font-size-sm">
                       Location
                     </p>
                     <button class="btn btn-outline-primary">Share Profile</button>
+                    <hr>
+                    <div>
+                      <form id="resumeUploadForm"
+                        enctype="multipart/form-data"
+                        onSubmit=""
+
+                        style="display: flex;justify-content: center;"
+                      >
+                        <div class="input-field">
+                          <input id="file" type="file" name="document" required />
+                        </div>
+
+                        <div class="input-field button">
+                          <button class="btn btn-outline-secondary" type="submit">Upload Resume</button>
+                        </div>
+                      </form>
+                    </div>
+                    
                   </div>
                 </div>
               </div>
@@ -202,7 +314,7 @@
               </ul>
             </div>
           </div>
-          <div class="col-md-8">
+          <div class="col-md-6">
             <div class="card mb-3">
               <div class="card-body">
                 <div class="row">
@@ -221,35 +333,14 @@
                 <hr />
                 <div class="row">
                   <div class="col-sm-3">
-                    <h6 class="mb-0">Phone</h6>
+                    <h6 class="mb-0">Wallet Address</h6>
                   </div>
-                  <div class="col-sm-9 text-secondary">(239) 816-9029</div>
+                  <div class="col-sm-9 text-secondary">XXXXXXXXXXXXXXXXXXXXXXXXXXX</div>
                 </div>
                 <hr />
-                <div class="row">
-                  <div class="col-sm-3">
-                    <h6 class="mb-0">Mobile</h6>
-                  </div>
-                  <div class="col-sm-9 text-secondary">(320) 380-4539</div>
-                </div>
-                <hr />
-                <div class="row">
-                  <div class="col-sm-3">
-                    <h6 class="mb-0">Address</h6>
-                  </div>
-                  <div class="col-sm-9 text-secondary">
-                    Bay Area, San Francisco, CA
-                  </div>
-                </div>
-                <hr />
+              
                 <div class="row">
                   <div class="col-sm-12">
-                    <a
-                      class="btn btn-info"
-                      target="__blank"
-                      href="https://www.bootdey.com/snippets/view/profile-edit-data-and-skills"
-                      >Edit</a
-                    >
                   </div>
                 </div>
               </div>
@@ -259,10 +350,12 @@
               <div class="col-sm-12 mb-3">
                 <div class="card h-100">
                   <div class="card-body">
-                    <h6 class="d-flex align-items-center mb-3">
+                    <h6 class="d-flex align-items-center mb-3" style="display: flex;justify-content: space-between;">
                       <i class="material-icons text-info mr-2"></i
                       >My Technical Status
+                      <button class="btn btn-outline-primary" data-toggle="modal" data-target="#skillModal">Add Skill</button>
                     </h6>
+                    
                     <small>Web Design</small>
                     <div class="progress mb-3" style="height: 5px">
                       <div
@@ -274,50 +367,7 @@
                         aria-valuemax="100"
                       ></div>
                     </div>
-                    <small>Website Markup</small>
-                    <div class="progress mb-3" style="height: 5px">
-                      <div
-                        class="progress-bar bg-primary"
-                        role="progressbar"
-                        style="width: 72%"
-                        aria-valuenow="72"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                      ></div>
-                    </div>
-                    <small>One Page</small>
-                    <div class="progress mb-3" style="height: 5px">
-                      <div
-                        class="progress-bar bg-primary"
-                        role="progressbar"
-                        style="width: 89%"
-                        aria-valuenow="89"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                      ></div>
-                    </div>
-                    <small>Mobile Template</small>
-                    <div class="progress mb-3" style="height: 5px">
-                      <div
-                        class="progress-bar bg-primary"
-                        role="progressbar"
-                        style="width: 55%"
-                        aria-valuenow="55"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                      ></div>
-                    </div>
-                    <small>Backend API</small>
-                    <div class="progress mb-3" style="height: 5px">
-                      <div
-                        class="progress-bar bg-primary"
-                        role="progressbar"
-                        style="width: 66%"
-                        aria-valuenow="66"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                      ></div>
-                    </div>
+                    
                   </div>
                 </div>
               </div>
@@ -326,7 +376,7 @@
         </div>
 
         <hr style="margin-top: 44px;">
-        <h2 style="text-align: center;">My Projects</h2>
+        <h2 style="text-align: center;display: flex;justify-content:space-between"><span>My Projects </span><button class="btn btn-outline-primary" data-toggle="modal" data-target="#projectModal">Add Projects</button></h2>
         <hr style="margin: 24px;">
 
         <div class="showcase">
@@ -344,8 +394,7 @@
         </div>
 
         <hr style="margin-top: 94px;">
-
-        <h2 style="text-align: center;">My Achievements</h2>
+        <h2 style="text-align: center;display: flex;justify-content:space-between"><span>My Achievements </span><button class="btn btn-outline-primary" data-toggle="modal" data-target="#achievementModal">Add Achievements</button></h2>
         <hr style="margin: 24px;">
 
         <div class="row">
