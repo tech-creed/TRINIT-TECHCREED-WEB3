@@ -12,8 +12,10 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // routes
 const DashboardRoute = require('./routes/dashboardRoute')
+const AuthRoute = require('./routes/authRoute')
 
 app.use('/',DashboardRoute)
+app.use('/auth',AuthRoute)
 
 PORT = 52332
 app.listen(PORT, () => {

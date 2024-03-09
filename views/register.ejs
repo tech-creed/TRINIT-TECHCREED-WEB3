@@ -22,7 +22,7 @@
       <div class="form">
         <span class="title">Register</span>
 
-        <form onSubmit="">
+        <form onSubmit="App.connectWalletRegister(); return false;">
           <div class="input-field">
             <input
               id="register_username"
@@ -60,7 +60,7 @@
         <div class="login-signup">
           <span class="text"
             >Already Member ?
-            <a href="/auth/login" class="text">Connect Now</a>
+            <a href="/login" class="text">Connect Now</a>
           </span>
         </div>
       </div>
