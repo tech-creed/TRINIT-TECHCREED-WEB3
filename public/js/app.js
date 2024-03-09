@@ -221,17 +221,85 @@ App = {
         alert(data["skill"] + " Skill Added");
         window.location.href = `/profile`;
       },
+      FetchPublicPortfolio:async(wallet_id)=>{
+        await App.load();
+        var userOrNot = await App.contracts.user.methods.isUserExists(wallet_id).call();
+        if (userOrNot) {
+            var dataChain = await App.contracts.user.methods
+                .users(wallet_id)
+                .call();
+
+                document.getElementById('card-name').innerHTML = dataChain["username"];
+                document.getElementById('card-email').innerHTML = dataChain["email"];
+                 document.getElementById('card-role').innerHTML = dataChain["role"];
+
+                 document.getElementById('right-name').innerHTML = dataChain["username"];
+                document.getElementById('right-email').innerHTML = dataChain["email"];
+                 document.getElementById('right-role').innerHTML = dataChain["role"];
+
+                 document.getElementById('right-wallet').innerHTML = wallet_id
+        } else {
+            window.location.href = `/`;
+        }
+
+        data = {};
+
+        var data = await App.contracts.portfolio.methods
+        .getPortfolio(wallet_id).call();
+        
+        console.log(data)
+
+        if(data.resumeIpfsHash == ""){
+          document.getElementById('resumeHref').style.display = 'none'
+        }else{
+          document.getElementById('resumeHref').href = data.resumeIpfsHash
+        }
+
+        var techStatus = document.getElementById('technicalStatus')
+        var techNew = ''
+
+        for (let i = 0; i < data.skills.length; i++) {
+          var techNew = '<small>'+data.skills[i].name+'</small><div class="progress mb-3" style="height: 5px">' +
+              '<div class="progress-bar bg-primary" role="progressbar" style="width: '+data.skills[i].proficiency+'%" aria-valuenow="'+data.skills[i].proficiency+'" aria-valuemin="0" aria-valuemax="100"></div>' +
+              '</div>';
+          techStatus.innerHTML += techNew;
+        }
+
+        var showProject = document.getElementById('projectShowcase')
+        var techProject = ''
+        
+        for (let i = 0; i < data.projects.length; i++) {
+          var techProject = '<div class="showcase"><div style="background: url('+data.projects[i].projectIpfsHash+');background-size: cover;background-position: center center; " class="thumbnail thumbnail--awesome"><div class="thumbnail__overlay">' +
+              '<a class="btn" href="#0">DETAILS</a></div></div><div class="desc"><p>Project</p><h2>'+data.projects[i].name+'</h2><p>'+data.projects[i].description+'</p></div></div><hr>';
+            showProject.innerHTML += techProject;
+        }
+
+        var showAchievement = document.getElementById('achievementShowcase')
+        var techAchievement = ''
+        
+        for (let i = 0; i < data.achievements.length; i++) {
+          if(i == 0){
+            var active = 'active'
+          }else{
+            var active = ''
+
+          }
+          var techAchievement = '<div class="carousel-item '+active+'"><div class="row"><div class="col-md-6 mb-3"><div class="card">'+
+                      '<img class="img-fluid" alt="100%x280" src="'+data.achievements[i].achievementIpfsHash+'"><div class="card-body">'+
+                      '<h4 class="card-title">'+data.achievements[i].name+'</h4><p class="card-text">'+data.achievements[i].description+'</p></div></div></div></div></div>';
+              showAchievement.innerHTML += techAchievement;
+        }
+
+      },
       FetchPortfolio: async()=>{
         await App.load();
         data = {};
-  
-        data["skill"] = document.getElementById("skill").value;
-        data["proficiency"] = document.getElementById("proficiency").value;
 
         var data = await App.contracts.portfolio.methods
         .getPortfolio(App.account).call();
         
         console.log(data)
+        document.getElementById('shareProfile').href = '/publicProfilePage/'+App.account
 
         if(data.resumeIpfsHash == ""){
           document.getElementById('resumeHref').style.display = 'none'
