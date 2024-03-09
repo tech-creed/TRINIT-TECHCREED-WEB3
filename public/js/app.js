@@ -65,21 +65,21 @@ App = {
     loadContracts: async () => {
       // users ABI
       const UserContract = await $.getJSON("/contracts/UserRegistration.json");
-      const contractAddress = "0xE8C91930793012a5147E05CC42C1b83c0529A519";
+      const contractAddress = "0x06029a4FdAf652edBD8c15d2A0D5312C4f430DAf";
       App.contracts.user = new web3.eth.Contract(
         UserContract.abi,
         contractAddress
       );
 
       const IDVerifyContract = await $.getJSON("/contracts/IdentityVerification.json");
-      const IDVerifyContractAdd = "0xbCcb1Cc6B3Aa1974e247546e3fBe50E85a7d4220";
+      const IDVerifyContractAdd = "0x722D203550D38CFCD8B23F1123DaC51418FE78A7";
       App.contracts.verify = new web3.eth.Contract(
         IDVerifyContract.abi,
         IDVerifyContractAdd
       );
 
       const ProtfolioContract = await $.getJSON("/contracts/PortfolioContract.json");
-      const ProtfolioContractAdd = "0xdE623787888F1cc7693B90Fe9e1be9E5C8ad259D";
+      const ProtfolioContractAdd = "0xf13fA75676c162663327f61E1791D56dd0F2FC91";
       App.contracts.portfolio = new web3.eth.Contract(
         ProtfolioContract.abi,
         ProtfolioContractAdd
@@ -219,6 +219,61 @@ App = {
         .addSkill(data["skill"],data["proficiency"] ).send({ from: App.account });
         
         alert(data["skill"] + " Skill Added");
+        window.location.href = `/profile`;
+      },
+      FetchPortfolio: async()=>{
+        await App.load();
+        data = {};
+  
+        data["skill"] = document.getElementById("skill").value;
+        data["proficiency"] = document.getElementById("proficiency").value;
+
+        var data = await App.contracts.portfolio.methods
+        .getPortfolio(App.account).call();
+        
+        console.log(data)
+
+        if(data.resumeIpfsHash == ""){
+          document.getElementById('resumeHref').style.display = 'none'
+        }else{
+          document.getElementById('resumeHref').href = data.resumeIpfsHash
+        }
+
+        var techStatus = document.getElementById('technicalStatus')
+        var techNew = ''
+
+        for (let i = 0; i < data.skills.length; i++) {
+          var techNew = '<small>'+data.skills[i].name+'</small><div class="progress mb-3" style="height: 5px">' +
+              '<div class="progress-bar bg-primary" role="progressbar" style="width: '+data.skills[i].proficiency+'%" aria-valuenow="'+data.skills[i].proficiency+'" aria-valuemin="0" aria-valuemax="100"></div>' +
+              '</div>';
+          techStatus.innerHTML += techNew;
+        }
+
+        var showProject = document.getElementById('projectShowcase')
+        var techProject = ''
+        
+        for (let i = 0; i < data.projects.length; i++) {
+          var techProject = '<div class="showcase"><div style="background: url('+data.projects[i].projectIpfsHash+');background-size: cover;background-position: center center; " class="thumbnail thumbnail--awesome"><div class="thumbnail__overlay">' +
+              '<a class="btn" href="#0">DETAILS</a></div></div><div class="desc"><p>Project</p><h2>'+data.projects[i].name+'</h2><p>'+data.projects[i].description+'</p></div></div><hr>';
+            showProject.innerHTML += techProject;
+        }
+
+        var showAchievement = document.getElementById('achievementShowcase')
+        var techAchievement = ''
+        
+        for (let i = 0; i < data.achievements.length; i++) {
+          if(i == 0){
+            var active = 'active'
+          }else{
+            var active = ''
+
+          }
+          var techAchievement = '<div class="carousel-item '+active+'"><div class="row"><div class="col-md-6 mb-3"><div class="card">'+
+                      '<img class="img-fluid" alt="100%x280" src="'+data.achievements[i].achievementIpfsHash+'"><div class="card-body">'+
+                      '<h4 class="card-title">'+data.achievements[i].name+'</h4><p class="card-text">'+data.achievements[i].description+'</p></div></div></div></div></div>';
+              showAchievement.innerHTML += techAchievement;
+        }
+
       },
 
       AddProject: async()=>{
@@ -246,6 +301,7 @@ App = {
               .send({ from: App.account });
     
             alert("Your project file Uploaded Successfully");
+            window.location.href = `/profile`;
           } else {
             alert("Failed to submit form");
           }
@@ -261,7 +317,7 @@ App = {
         const formData = new FormData(form);
 
         data["achievementName"] = document.getElementById("achievementName").value;
-        data["description"] = document.getElementById("description").value;
+        data["description"] = document.getElementById("Adescription").value;
 
         try {
           const response = await fetch("/ipfs/achievement-upload", {
@@ -274,10 +330,11 @@ App = {
             console.log("Response:", responseData);
     
             await App.contracts.portfolio.methods
-              .addProject(data["achievementName"],data["description"],responseData.AchievementFileURL)
+              .addAchievement(data["achievementName"],data["description"],responseData.AchievementFileURL)
               .send({ from: App.account });
     
             alert("Your project file Uploaded Successfully");
+            window.location.href = `/profile`;
           } else {
             alert("Failed to submit form");
           }

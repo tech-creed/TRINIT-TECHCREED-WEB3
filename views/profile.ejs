@@ -79,7 +79,7 @@
               </div>
               <div class="form-group">
                 <label for="description">Description</label>
-                <textarea class="form-control" id="description" rows="3" placeholder="Enter project description"></textarea>
+                <input type="text" class="form-control" id="description" rows="3" placeholder="Enter project description" />
               </div>
               <div class="form-group">
                 <label for="projectFile">Project File</label>
@@ -112,7 +112,7 @@
               </div>
               <div class="form-group">
                 <label for="description">Description</label>
-                <textarea class="form-control" id="description" rows="3" placeholder="Enter achievement description"></textarea>
+                <input type="text" class="form-control" id="Adescription" rows="3" placeholder="Enter achievement description" />
               </div>
               <div class="form-group">
                 <label for="achievementFile">Achievement File</label>
@@ -169,6 +169,8 @@
                       Location
                     </p>
                     <button class="btn btn-outline-primary">Share Profile</button>
+                    <a id="resumeHref" target="_blank" style="color: rgb(0, 102, 255);" class="btn btn-outline-primary">Resume</a>
+                    
                     <hr>
                     <div>
                       <form id="resumeUploadForm"
@@ -367,17 +369,9 @@
                       <button class="btn btn-outline-primary" data-toggle="modal" data-target="#skillModal">Add Skill</button>
                     </h6>
                     
-                    <small>Web Design</small>
-                    <div class="progress mb-3" style="height: 5px">
-                      <div
-                        class="progress-bar bg-primary"
-                        role="progressbar"
-                        style="width: 80%"
-                        aria-valuenow="80"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                      ></div>
+                    <div id="technicalStatus">
                     </div>
+                    
                     
                   </div>
                 </div>
@@ -390,19 +384,11 @@
         <h2 style="text-align: center;display: flex;justify-content:space-between"><span>My Projects </span><button class="btn btn-outline-primary" data-toggle="modal" data-target="#projectModal">Add Projects</button></h2>
         <hr style="margin: 24px;">
 
-        <div class="showcase">
-            <div style="background: url(https://st2.depositphotos.com/1813786/12508/v/450/depositphotos_125087888-stock-illustration-project-icons-and-elements.jpg);background-size: cover;background-position: center center; " class="thumbnail thumbnail--awesome">
-                <div class="thumbnail__overlay">
-                    <a class="btn" href="#0">DETAILS</a>
-                </div>
-            </div>
-            <div class="desc">
-                <p>Case Study</p>
-                <h2>Awesome Project</h2>
-                <p>This project is awesome!
-                </p>
-            </div>
+        <div id="projectShowcase">
+          
         </div>
+        
+        
 
         <hr style="margin-top: 94px;">
         <h2 style="text-align: center;display: flex;justify-content:space-between"><span>My Achievements </span><button class="btn btn-outline-primary" data-toggle="modal" data-target="#achievementModal">Add Achievements</button></h2>
@@ -424,52 +410,10 @@
             <div class="col-12">
                 <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
 
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="row">
-
-                                <div class="col-md-4 mb-3">
-                                    <div class="card">
-                                        <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1532781914607-2031eca2f00d?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=7c625ea379640da3ef2e24f20df7ce8d">
-                                        <div class="card-body">
-                                            <h4 class="card-title">Achievement 1</h4>
-                                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="row">
-
-                                <div class="col-md-4 mb-3">
-                                    <div class="card">
-                                        <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1532781914607-2031eca2f00d?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=7c625ea379640da3ef2e24f20df7ce8d">
-                                        <div class="card-body">
-                                            <h4 class="card-title">Achievement 2</h4>
-                                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="row">
-
-                                <div class="col-md-4 mb-3">
-                                    <div class="card">
-                                        <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1532781914607-2031eca2f00d?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=7c625ea379640da3ef2e24f20df7ce8d">
-                                        <div class="card-body">
-                                            <h4 class="card-title">Achievement 3</h4>
-                                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div id="achievementShowcase" class="carousel-inner">
+                        
                     </div>
+                    
                 </div>
             </div>
         </div>
@@ -550,6 +494,9 @@
   <script src="/js/main.js"></script>
   <script src="/js/app.js"></script>
 
+  <script>
+    App.FetchPortfolio()
+  </script>
     <script>
       cookies = document.cookie.split(';')
     console.log(cookies)
