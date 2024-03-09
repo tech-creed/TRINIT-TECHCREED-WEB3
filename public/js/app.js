@@ -70,6 +70,13 @@ App = {
         UserContract.abi,
         contractAddress
       );
+
+      const IDVerifyContract = await $.getJSON("/contracts/IdentityVerification.json");
+      const IDVerifyContractAdd = "0xc4F690E50B3cbeaB3496091015Dd1f39213fF439";
+      App.contracts.verify = new web3.eth.Contract(
+        IDVerifyContract.abi,
+        IDVerifyContractAdd
+      );
     },
   
     connectWalletRegister: async () => {
@@ -97,14 +104,43 @@ App = {
         .registerUser(data["name"],data["email"], data["role"] )
         .send({ from: App.account });
         alert(data["name"] + " Welcome to the Decentralized Talent Discovery Platform");
-        window.location.href = `/ipfs/kyc-file-upload`;
-        window.location.href = `/dashboard`;
-        console.log('done')
+        window.location.href = `/verification`;
       }else{
         alert("You have already registered");
         window.location.href = `/login`;
       }
     },
+
+    docVerify: async () => {
+        await App.load();
+    
+        const form = document.getElementById("docVerifyForm");
+    
+        const formData = new FormData(form);
+        try {
+          const response = await fetch("/ipfs/file-upload", {
+            method: "POST",
+            body: formData,
+          });
+    
+          if (response.ok) {
+            const responseData = await response.json();
+            console.log("Response:", responseData);
+    
+            await App.contracts.verify.methods
+              .submitDocument(responseData.ipfsUrl_Document)
+              .send({ from: App.account });
+    
+            alert("Your Document Submitted Successfully");
+            window.location.href = `/dashboard`;
+          } else {
+            console.error("Failed to submit form");
+          }
+        } catch (error) {
+          console.error("Error:", error);
+        }
+      },
+
     connectWalletLogin: async () => {
         await App.load();
         data = {};
@@ -135,4 +171,6 @@ App = {
           window.location.href = `/register`;
         }
       },
+
+
 }
