@@ -65,14 +65,14 @@ App = {
     loadContracts: async () => {
       // users ABI
       const UserContract = await $.getJSON("/contracts/UserRegistration.json");
-      const contractAddress = "0x06ADAe7477aCBe878dB7d1FeEecB504779D0bBB3";
+      const contractAddress = "0xE8C91930793012a5147E05CC42C1b83c0529A519";
       App.contracts.user = new web3.eth.Contract(
         UserContract.abi,
         contractAddress
       );
 
       const IDVerifyContract = await $.getJSON("/contracts/IdentityVerification.json");
-      const IDVerifyContractAdd = "0xc4F690E50B3cbeaB3496091015Dd1f39213fF439";
+      const IDVerifyContractAdd = "0xbCcb1Cc6B3Aa1974e247546e3fBe50E85a7d4220";
       App.contracts.verify = new web3.eth.Contract(
         IDVerifyContract.abi,
         IDVerifyContractAdd
@@ -139,7 +139,7 @@ App = {
               .send({ from: App.account });
     
             alert("Your Document Submitted Successfully");
-            window.location.href = `/dashboard`;
+            window.location.href = `/profile`;
           } else {
             console.error("Failed to submit form");
           }
@@ -161,6 +161,7 @@ App = {
             .call();
     
           data["name"] = dataChain["username"];
+          data["email"] = dataChain["email"];
           data["role"] = dataChain["role"];
 
           let r = await fetch("/auth/login", {
@@ -171,7 +172,7 @@ App = {
           r = await r.json();
           if (r) {
             alert(data["name"] + " Welcome to the Decentralized Talent Discovery Platform");
-            window.location.href = `/dashboard`;
+            window.location.href = `/profile`;
           }
         } else {
           alert("Need to register");

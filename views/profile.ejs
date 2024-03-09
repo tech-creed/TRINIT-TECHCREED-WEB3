@@ -160,9 +160,9 @@
                     width="150"
                   />
                   <div class="mt-4">
-                    <h4>Full Name</h4>
-                    <p class="text-secondary mb-1">Desgination</p>
-                    <p class="text-muted font-size-sm">
+                    <h4 id="card-name"></h4>
+                    <p id="card-role" class="text-secondary mb-1">Desgination</p>
+                    <p id="card-email" class="text-muted font-size-sm">
                       Location
                     </p>
                     <button class="btn btn-outline-primary">Share Profile</button>
@@ -322,21 +322,28 @@
                   <div class="col-sm-3">
                     <h6 class="mb-0">Full Name</h6>
                   </div>
-                  <div class="col-sm-9 text-secondary">Kenneth Valdez</div>
+                  <div id="right-name" class="col-sm-9 text-secondary"></div>
                 </div>
                 <hr />
                 <div class="row">
                   <div class="col-sm-3">
                     <h6 class="mb-0">Email</h6>
                   </div>
-                  <div class="col-sm-9 text-secondary">fip@jukmuh.al</div>
+                  <div id="right-email" class="col-sm-9 text-secondary"></div>
+                </div>
+                <hr />
+                <div class="row">
+                  <div class="col-sm-3">
+                    <h6 class="mb-0">Role</h6>
+                  </div>
+                  <div id="right-role" class="col-sm-9 text-secondary"></div>
                 </div>
                 <hr />
                 <div class="row">
                   <div class="col-sm-3">
                     <h6 class="mb-0">Wallet Address</h6>
                   </div>
-                  <div class="col-sm-9 text-secondary">XXXXXXXXXXXXXXXXXXXXXXXXXXX</div>
+                  <div id="right-wallet" class="col-sm-9 text-secondary"></div>
                 </div>
                 <hr />
               
@@ -544,7 +551,16 @@
       cookies = document.cookie.split(';')
     console.log(cookies)
     document.getElementById(cookies[2].split('=')[0].trim()).value = decodeURIComponent(cookies[2].split('=')[1])
-    document.getElementById('tokenId').value = decodeURIComponent(cookies[0].split('=')[1]).slice(2,11)
+    document.getElementById('card-name').innerHTML = decodeURIComponent(cookies[2].split('=')[1])
+    document.getElementById('card-role').innerHTML = decodeURIComponent(cookies[1].split('=')[1])
+    document.getElementById('card-email').innerHTML = decodeURIComponent(cookies[3].split('=')[1])
+
+    document.getElementById('right-name').innerHTML = decodeURIComponent(cookies[2].split('=')[1])
+    document.getElementById('right-role').innerHTML = decodeURIComponent(cookies[1].split('=')[1])
+    document.getElementById('right-email').innerHTML = decodeURIComponent(cookies[3].split('=')[1])
+    document.getElementById('right-wallet').innerHTML = decodeURIComponent(cookies[0].split('=')[1])
+
+
     </script>
   </body>
 </html>
