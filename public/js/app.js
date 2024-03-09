@@ -208,4 +208,16 @@ App = {
           console.error("Error:", error);
         }
       },
+      AddSkills: async()=>{
+        await App.load();
+        data = {};
+  
+        data["skill"] = document.getElementById("skill").value;
+        data["proficiency"] = document.getElementById("proficiency").value;
+
+        await App.contracts.portfolio.methods
+        .addSkill(data["skill"],data["proficiency"] ).send({ from: App.account });
+        
+        alert(data["skill"] + " Skill Added");
+      },
 }
