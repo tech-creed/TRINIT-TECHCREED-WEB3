@@ -22,6 +22,10 @@ const adminVerificationPage = async(req,res)=>{
     res.render('platformVerification')
 }
 
+const publicProfilePage = async(req,res)=>{
+    res.render('publicProfile',{walletID:req.params.wallet})
+}
+
 adminVerificationPage
 
-module.exports = {homePage, loginPage, registerPage, verificationPage, profilePage, adminVerificationPage}
+module.exports = {homePage, loginPage, registerPage, verificationPage, profilePage, adminVerificationPage, publicProfilePage}

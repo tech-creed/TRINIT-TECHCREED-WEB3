@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Decentralized Talent Discovery Platform | Profile</title>
 
-    <link rel="stylesheet" href="fonts/icomoon/style.css" />
-    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css" />
-    <link rel="stylesheet" href="css/bootstrap.css" />
-    <link rel="stylesheet" href="css/tiny-slider.css" />
-    <link rel="stylesheet" href="css/aos.css" />
-    <link rel="stylesheet" href="css/profile.css" />
-    <link rel="stylesheet" href="css/projects.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="/fonts/icomoon/style.css" />
+    <link rel="stylesheet" href="/fonts/flaticon/font/flaticon.css" />
+    <link rel="stylesheet" href="/css/bootstrap.css" />
+    <link rel="stylesheet" href="/css/tiny-slider.css" />
+    <link rel="stylesheet" href="/css/aos.css" />
+    <link rel="stylesheet" href="/css/profile.css" />
+    <link rel="stylesheet" href="/css/projects.css" />
+    <link rel="stylesheet" href="/css/style.css" />
 
     <link href="/vendor/aos/aos.css" rel="stylesheet">
     <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -31,100 +31,6 @@
     </style>
   </head>
   <body>
-    
-    <!-- Modal -->
-    <div class="modal fade" id="skillModal" tabindex="-1" role="dialog" aria-labelledby="skillModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="skillModalLabel">Add Your Skill</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <!-- Form inside modal -->
-            <form id="myForm" onSubmit="App.AddSkills(); return false;">
-              <div class="form-group">
-                <label for="skill">Skill</label>
-                <input type="text" class="form-control" id="skill" placeholder="Enter skill" required>
-              </div>
-              <div class="form-group">
-                <label for="proficiency">Proficiency (%)</label>
-                <input type="number" class="form-control" id="proficiency" placeholder="Enter proficiency percentage" required>
-              </div>
-              <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Modal -->
-    <div class="modal fade" id="projectModal" tabindex="-1" role="dialog" aria-labelledby="projectModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="projectModalLabel">Add Your Projects</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <!-- Form inside modal -->
-            <form id="AddProjectForm" onSubmit="App.AddProject(); return false;" enctype="multipart/form-data">
-              <div class="form-group">
-                <label for="projectName">Project Name</label>
-                <input type="text" class="form-control" id="projectName" placeholder="Enter project name">
-              </div>
-              <div class="form-group">
-                <label for="description">Description</label>
-                <textarea class="form-control" id="description" rows="3" placeholder="Enter project description"></textarea>
-              </div>
-              <div class="form-group">
-                <label for="projectFile">Project File</label>
-                <input type="hidden" id="name" name="ownerName" value="">
-                <input type="hidden" id="tokenIdForProjectDoc" name="tokenId" value="">
-                <input type="file" class="form-control-file" name="document" id="projectFile">
-              </div>
-              <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="modal fade" id="achievementModal" tabindex="-1" role="dialog" aria-labelledby="achievementModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="achievementModalLabel">Add Your Achievement</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <!-- Form inside modal -->
-            <form id="AddAchievementForm" onSubmit="App.AddAchievement(); return false;" enctype="multipart/form-data">
-              <div class="form-group">
-                <label for="achievementName">Achievement Name</label>
-                <input type="text" class="form-control" id="achievementName" placeholder="Enter achievement name">
-              </div>
-              <div class="form-group">
-                <label for="description">Description</label>
-                <textarea class="form-control" id="description" rows="3" placeholder="Enter achievement description"></textarea>
-              </div>
-              <div class="form-group">
-                <label for="achievementFile">Achievement File</label>
-                <input type="file" class="form-control-file" name="document" id="achievementFile">
-              </div>
-              <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-
 
     
     <div style="margin-top: 24px;" class="container-fluid container-xl d-flex align-items-center justify-content-between">
@@ -133,18 +39,7 @@
           <img src="/images/logo.png" width="100px" alt="">
         </a>
   
-        <nav id="navbar" class="navbar">
-          <ul>
-            <li><a class="scrollto" href="#">My Skills</a></li>
-
-            <li><a class="scrollto" href="#">My Achievement</a></li>
-
-            <li><a class="scrollto" href="#">My Projetcs</a></li>
-
-            <li><a class="getstarted scrollto" href="/auth/logout">Logout</a></li>
-          </ul>
-          <i class="bi bi-list mobile-nav-toggle"></i>
-        </nav>
+       
   
       </div>
     <div class="container" style="margin-top: 63px;">
@@ -164,29 +59,13 @@
                   />
                   <div class="mt-4">
                     <h4 id="card-name"></h4>
-                    <p id="card-role" class="text-secondary mb-1">Desgination</p>
+                    <p id="card-role" class="text-secondary mb-1"></p>
                     <p id="card-email" class="text-muted font-size-sm">
-                      Location
+                      
                     </p>
-                    <button class="btn btn-outline-primary">Share Profile</button>
+                    
                     <hr>
-                    <div>
-                      <form id="resumeUploadForm"
-                        enctype="multipart/form-data"
-                        onSubmit="App.ResumeUpload(); return false;"
-                        style="display: flex;justify-content: center;"
-                      >
-                      <input type="hidden" id="name" name="ownerName" value="">
-                      <input type="hidden" id="tokenId" name="tokenId" value="">
-                        <div class="input-field">
-                          <input id="file" type="file" name="document" required />
-                        </div>
 
-                        <div class="input-field button">
-                          <button class="btn btn-outline-secondary" type="submit">Upload Resume</button>
-                        </div>
-                      </form>
-                    </div>
                     
                   </div>
                 </div>
@@ -346,7 +225,7 @@
                   <div class="col-sm-3">
                     <h6 class="mb-0">Wallet Address</h6>
                   </div>
-                  <div id="right-wallet" class="col-sm-9 text-secondary"></div>
+                  <div id="right-wallet" class="col-sm-9 text-secondary"><%-walletID%></div>
                 </div>
                 <hr />
               
@@ -364,7 +243,7 @@
                     <h6 class="d-flex align-items-center mb-3" style="display: flex;justify-content: space-between;">
                       <i class="material-icons text-info mr-2"></i
                       >My Technical Status
-                      <button class="btn btn-outline-primary" data-toggle="modal" data-target="#skillModal">Add Skill</button>
+                      <button class="btn btn-outline-primary" data-toggle="modal" data-target="#skillModal"></button>
                     </h6>
                     
                     <small>Web Design</small>
@@ -387,7 +266,7 @@
         </div>
 
         <hr style="margin-top: 44px;">
-        <h2 style="text-align: center;display: flex;justify-content:space-between"><span>My Projects </span><button class="btn btn-outline-primary" data-toggle="modal" data-target="#projectModal">Add Projects</button></h2>
+        <h2 style="text-align: center;display: flex;justify-content:space-between"><span>My Projects </span><button class="btn btn-outline-primary" data-toggle="modal" data-target="#projectModal"></button></h2>
         <hr style="margin: 24px;">
 
         <div class="showcase">
@@ -405,7 +284,7 @@
         </div>
 
         <hr style="margin-top: 94px;">
-        <h2 style="text-align: center;display: flex;justify-content:space-between"><span>My Achievements </span><button class="btn btn-outline-primary" data-toggle="modal" data-target="#achievementModal">Add Achievements</button></h2>
+        <h2 style="text-align: center;display: flex;justify-content:space-between"><span>My Achievements </span><button class="btn btn-outline-primary" data-toggle="modal" data-target="#achievementModal"></button></h2>
         <hr style="margin: 24px;">
 
         <div class="row">
