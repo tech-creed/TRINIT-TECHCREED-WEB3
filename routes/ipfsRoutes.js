@@ -6,7 +6,6 @@ const ipfsController = require('../controllers/ipfsController')
 router.use(fileUpload({useTempFiles: true}));
 
 router.post("/file-upload",ipfsController.ipfsUpload)
-router.get('/kyc-file-upload',ipfsController.fileUploadPage)
-
+router.post("/resume-upload",ipfsController.resumeUpload)
 
 module.exports = router;

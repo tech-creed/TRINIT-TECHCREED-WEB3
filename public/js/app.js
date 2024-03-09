@@ -77,6 +77,13 @@ App = {
         IDVerifyContract.abi,
         IDVerifyContractAdd
       );
+
+      const ProtfolioContract = await $.getJSON("/contracts/PortfolioContract.json");
+      const ProtfolioContractAdd = "0xdE623787888F1cc7693B90Fe9e1be9E5C8ad259D";
+      App.contracts.portfolio = new web3.eth.Contract(
+        ProtfolioContract.abi,
+        ProtfolioContractAdd
+      );
     },
   
     connectWalletRegister: async () => {
@@ -172,5 +179,32 @@ App = {
         }
       },
 
+      ResumeUpload:async()=>{
+        await App.load();
 
+        const form = document.getElementById("resumeUploadForm");
+    
+        const formData = new FormData(form);
+        try {
+          const response = await fetch("/ipfs/resume-upload", {
+            method: "POST",
+            body: formData,
+          });
+    
+          if (response.ok) {
+            const responseData = await response.json();
+            console.log("Response:", responseData);
+    
+            await App.contracts.portfolio.methods
+              .UpdatePortfolio(responseData.resumeUrl)
+              .send({ from: App.account });
+    
+            alert("Your Resume Uploaded Successfully");
+          } else {
+            alert("Failed to submit form");
+          }
+        } catch (error) {
+          console.error("Error:", error);
+        }
+      },
 }

@@ -76,8 +76,31 @@ const ipfsUpload = async (req, res) => {
     }
 }
 
-const fileUploadPage = async (req, res) => {
-    res.render('upload') 
-} 
+const resumeUpload = async (req, res) => {
+    const { ownerName, tokenId } = req.body;
+    console.log(ownerName, tokenId);
 
-module.exports = { ipfsUpload, fileUploadPage } 
+    const { document } = req?.files ?? {};
+    console.log(`Uploading resume for [${ownerName}] to local IPFS server.`);
+
+    try {
+        if (!document || !ownerName || !tokenId) {
+            return res.status(400).send({ message: 'Invalid input' });
+        }
+
+        const resumeName = `${new Date().getTime()}_${document.name.replace(/ /g, '')}`;
+        const file = await fileFromPath(document, resumeName);
+        const resumeCid = await storeFiles(file);
+
+        const resumeUrl = `http://localhost:8081/ipfs/${resumeCid}`;
+
+        res.json({ ownerName, tokenId, resumeUrl });
+    } catch (error) {
+        console.log(`Problem while uploading resume to local IPFS server: ${error}`);
+        return res.status(500).send({
+            message: 'Problem while uploading resume to local IPFS server'
+        });
+    }
+}
+
+module.exports = { ipfsUpload,resumeUpload } 

@@ -170,10 +170,11 @@
                     <div>
                       <form id="resumeUploadForm"
                         enctype="multipart/form-data"
-                        onSubmit=""
-
+                        onSubmit="App.ResumeUpload(); return false;"
                         style="display: flex;justify-content: center;"
                       >
+                      <input type="hidden" id="name" name="ownerName" value="">
+                      <input type="hidden" id="tokenId" name="tokenId" value="">
                         <div class="input-field">
                           <input id="file" type="file" name="document" required />
                         </div>
@@ -524,12 +525,26 @@
       </div>
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"></script>
-    <script src="ttps://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+   
     <script src="/js/bootstrap.bundle.min.js"></script>
     <script src="/js/tiny-slider.js"></script>
     <script src="/js/aos.js"></script>
     <script src="/js/navbar.js"></script>
     <script src="/js/counter.js"></script>
     <script src="/js/custom.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/truffle-contract@4.0.31/dist/truffle-contract.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.7.0-rc.0/web3.min.js"></script>
+
+  <script src="/js/main.js"></script>
+  <script src="/js/app.js"></script>
+
+    <script>
+      cookies = document.cookie.split(';')
+    console.log(cookies)
+    document.getElementById(cookies[2].split('=')[0].trim()).value = decodeURIComponent(cookies[2].split('=')[1])
+    document.getElementById('tokenId').value = decodeURIComponent(cookies[0].split('=')[1]).slice(2,11)
+    </script>
   </body>
 </html>
