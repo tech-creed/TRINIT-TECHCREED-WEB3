@@ -1,11 +1,379 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Talent Discovery Platform</title>
-</head>
-<body>
-    <h1>TechCreed</h1>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="fonts/icomoon/style.css" />
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/tiny-slider.css" />
+    <link rel="stylesheet" href="css/aos.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Decentralized Talent Discovery Platform</title>
+  </head>
+  <body>
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close">
+          <span class="icofont-close js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    <nav class="site-nav mt-3">
+      <div class="container">
+        <div class="site-navigation">
+          <a href="index.html" class="logo m-0 mt-2 float-start"
+            ><img src="images/logo.png" alt="Image" class="img-fluid"
+          /></a>
+          <ul
+            class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-end"
+          >
+            <li class="active"><a href="index.html">Home</a></li>
+            <li class="has-children">
+              <a href="#">Dropdown</a>
+              <ul class="dropdown">
+                <li><a href="#">Menu One</a></li>
+                <li class="has-children">
+                  <a href="#">Menu Two</a>
+                  <ul class="dropdown">
+                    <li><a href="#">Sub Menu One</a></li>
+                    <li><a href="#">Sub Menu Two</a></li>
+                    <li><a href="#">Sub Menu Three</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Menu Three</a></li>
+              </ul>
+            </li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li class="cta-button"><a href="#">Download now</a></li>
+          </ul>
+          <a
+            href="#"
+            class="burger ml-auto float-right site-menu-toggle js-menu-toggle d-inline-block d-lg-none"
+            data-toggle="collapse"
+            data-target="#main-navbar"
+          >
+            <span></span>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <div class="hero-section">
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col-lg-5">
+            <span class="subheading mb-2" data-aos="fade-up"
+              >Welcome to our site</span
+            >
+            <h1 class="heading mb-3" data-aos="fade-up" data-aos-delay="100">
+                Unlock Your Potential with Our Decentralized Talent Platform
+            </h1>
+            <p class="mb-5" data-aos="fade-up" data-aos-delay="200">
+                Empowering artists, creators, developers, and professionals to showcase their skills, find opportunities, and collaborate without intermediaries. Join our decentralized community today and discover a world of endless possibilities.
+            </p>
+            <p data-aos="fade-up" data-aos-delay="300">
+              <a href="#" class="btn btn-primary mr-2">How we work</a>
+              <a href="#" class="btn btn-outline-primary">Contact us</a>
+            </p>
+          </div>
+          <div class="col-lg-6">
+            <div class="img-wrap" data-aos="fade-left">
+              <img src="images/hero_1.png" alt="Image" class="img-fluid" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section pt-0 section-2">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-lg-5 mx-auto text-center" data-aos="fade-up">
+            <span class="subheading mb-2">Features</span>
+            <h1 class="heading mb-3">Our Features</h1>
+            <p>
+                Experience a cutting-edge platform for talent discovery and collaboration. Manage your digital identity securely, showcase your skills with tamper-proof portfolios, and engage in transparent collaboration agreements powered by smart contracts.
+            </p>
+          </div>
+        </div>
+        <div class="row g-5 text-center">
+          <div class="col-lg-3" data-aos="fade-up" data-aos-delay="0">
+            <div class="feature text-center">
+              <div class="icon"><span class="flaticon-startup"></span></div>
+              <h3>Decentralized Identity</h3>
+              <p>
+                Ensure privacy and control over personal data with decentralized identity solutions.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="feature text-center">
+              <div class="icon"><span class="flaticon-link"></span></div>
+              <h3>Portfolio and Skill Showcase</h3>
+              <p>
+                Showcase your work, skills, and achievements in a verifiable and tamper-proof manner.
+                Utilize decentralized storage solutions like IPFS for secure storage and accessibility.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-3" data-aos="fade-up" data-aos-delay="200">
+            <div class="feature text-center">
+              <div class="icon"><span class="flaticon-startup"></span></div>
+              <h3>Decentralized Governance</h3>
+              <p>
+                Participate in platform governance through a DAO structure.
+                Propose and vote on platform improvements and decisions, ensuring community-driven development.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-3" data-aos="fade-up" data-aos-delay="200">
+            <div class="feature text-center">
+              <div class="icon"><span class="flaticon-trophy"></span></div>
+              <h3>Tokenization of Skills and Contributions</h3>
+              <p>
+                Represent your skills and contributions with tokens, enabling fair compensation.
+                Incentivize collaboration and reward valuable contributions within the platform ecosystem.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section section-3">
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col-lg-7" data-aos="fade-up">
+            <img src="images/about_1.png" alt="Image" class="img-fluid" />
+          </div>
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="subheading mb-2">About us</h3>
+            <h2 class="heading mb-4">Why Us ?</h2>
+            <p>
+                In our platform, we stand out as pioneers in the realm of decentralized talent discovery and collaboration. Our platform offers unparalleled advantages:
+            </p>
+            <p class="mb-3">
+                Experience unparalleled decentralization, innovation, community-centricity, security, and commitment to excellence in talent discovery and collaboration.
+            </p>
+            <ul class="list-check list-unstyled mb-5">
+              <li>Blockchain-driven transparency, fairness, and inclusivity</li>
+              <li>Innovative tokenization for fair compensation and collaboration</li>
+              <li>Community-driven platform tailored to user needs</li>
+              <li>Decentralized security and privacy protocols</li>
+              <li>Continuous refinement for an excellent user experience</li>
+
+            </ul>
+            <p><a href="#" class="btn btn-primary">About us</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section section-4">
+      <div class="container">
+        <div class="row text-center mb-5" data-aos="fade-up">
+          <div class="col-lg-6 mx-auto text-center">
+            <h3 class="subheading mb-2">Services</h3>
+            <h2 class="heading mb-4">Our Services</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="row">
+              <div class="col-lg-6" data-aos="fade-up" data-aos-delay="0">
+                <div class="service d-flex">
+                  <div class="icon">
+                    <span class="flaticon-shield"></span>
+                  </div>
+                  <div class="text">
+                    <h3>Smart Contract Development</h3>
+                    <p>
+                        Create and deploy smart contracts tailored to specific collaboration agreements and tokenized representations of skills and contributions.
+                    </p>
+                  </div>
+                </div>
+                <div class="service d-flex">
+                  <div class="icon">
+                    <span class="flaticon-megaphone"></span>
+                  </div>
+                  <div class="text">
+                    <h3>Cross-Chain Compatibility</h3>
+                    <p>
+                        Develop interoperability protocols or bridges to enable seamless operation across multiple blockchains, enhancing accessibility and usability.
+                    </p>
+                  </div>
+                </div>
+                <div class="service d-flex">
+                  <div class="icon">
+                    <span class="flaticon-contract"></span>
+                  </div>
+                  <div class="text">
+                    <h3>Blockchain Integration</h3>
+                    <p>
+                        Integrate blockchain technology into existing systems or applications to enable decentralized identity management, governance, and tokenization functionalities.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="service d-flex">
+                  <div class="icon">
+                    <span class="flaticon-startup"></span>
+                  </div>
+                  <div class="text">
+                    <h3>Identity Management Systems</h3>
+                    <p>
+                        Design and implement decentralized identity management systems based on protocols like Decentralized Identifier (DID) to ensure privacy and control over personal data.
+                    </p>
+                  </div>
+                </div>
+                <div class="service d-flex">
+                  <div class="icon">
+                    <span class="flaticon-link"></span>
+                  </div>
+                  <div class="text">
+                    <h3>Governance Mechanisms</h3>
+                    <p>
+                        Build decentralized autonomous organization (DAO) structures for platform governance, allowing users to propose and vote on platform improvements and decisions.
+                    </p>
+                  </div>
+                </div>
+                <div class="service d-flex">
+                  <div class="icon">
+                    <span class="flaticon-trophy"></span>
+                  </div>
+                  <div class="text">
+                    <h3>Decentralized Storage Solutions</h3>
+                    <p>
+                        Implement decentralized storage solutions like IPFS or Swarm to securely store and retrieve user portfolios and project data.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="site-footer">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md-6 col-lg-4">
+            <div class="widget">
+              <h3 class="heading">About Application</h3>
+              <p>
+                Far far away, behind the word mountains, far from the countries
+                Vokalia and Consonantia, there live the blind texts.
+              </p>
+            </div>
+            <div class="widget">
+              <ul class="list-unstyled social">
+                <li>
+                  <a href="#"><span class="icon-twitter"></span></a>
+                </li>
+                <li>
+                  <a href="#"><span class="icon-instagram"></span></a>
+                </li>
+                <li>
+                  <a href="#"><span class="icon-facebook"></span></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-2 pl-lg-5">
+            <div class="widget">
+              <h3 class="heading">Pages</h3>
+              <ul class="links list-unstyled">
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-2">
+            <div class="widget">
+              <h3 class="heading">Resources</h3>
+              <ul class="links list-unstyled">
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="widget">
+              <h3 class="heading">Contact</h3>
+              <ul class="list-unstyled quick-info links">
+                <li class="email"><a href="#">info@Cololib</a></li>
+                <li class="phone"><a href="#">+1 222 212 3819</a></li>
+                <li class="address">
+                  <a href="#">43 Raymouth Rd. Baltemoer, London 3910</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <p>
+              Copyright &copy;
+              <script>
+                document.write(new Date().getFullYear());
+              </script>
+              All rights reserved | This Application made with
+              <i class="icon-heart text-danger" aria-hidden="true"></i> by
+              <a
+                href=""
+                target="_blank"
+                rel="nofollow noopener"
+                >TECH CREED</a
+              >
+              During the Hackathon of Tri-NIT Hackathon 3.0
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="overlayer"></div>
+    <div class="loader">
+      <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/tiny-slider.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/counter.js"></script>
+    <script src="js/custom.js"></script>
+
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-23581568-13");
+    </script>
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317"
+      integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA=="
+      data-cf-beacon='{"rayId":"8619ca923cae3e51","version":"2024.2.4","token":"cd0b4b3a733644fc843ef0b185f98241"}'
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
