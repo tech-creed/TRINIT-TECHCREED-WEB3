@@ -8,6 +8,10 @@ Unlock Your Potential with Our Decentralized Talent Platform. Empowering artists
 ### Application Deployed Link - https://trinit-techcreed-web3.onrender.com
 ### Video Presentation Link - Will be Updated
 
+# Smart Contract Deployed (Goerli testnet)
+- Verification Smart COntract : https://goerli.etherscan.io/address/0x084b9339660bAB21FDB9f436cb32870748B099c3
+- UserRegistration Smart Contract : https://goerli.etherscan.io/address/0x1A3994f30F45aA9De2abe0Cbb71cdBaa75bFBcC5
+
 ## Problem Explored
 In the digital era, talent discovery and collaboration often face challenges such as lack of transparency, centralized control, and limited opportunities for fair compensation. Traditional platforms rely on intermediaries, resulting in inefficiencies and barriers to entry for talented individuals. Additionally, existing systems may not adequately address privacy concerns, leading to data vulnerabilities and misuse.
 
@@ -22,6 +26,7 @@ clone the repo to your local system,
 2. Python 3.8.x > version
 3. NodeJS
 4. Truffle
+5. IPFS Filesystem
 
 ### Procedure to start the servers
 #### 1. Ganache ETH Local
@@ -43,6 +48,12 @@ truffle migrate
 / The Developed smart contract will be deployed to local ETH chain
 Note : Copy the compailed contract inside build and paste inside public folder
 ```
+#### 4. IPFS System Config
+```
+Gateway : 127.0.0.1:8081
+IPFS Endpoint : 127.0.0.1:5001
+The IPFS will start in, 127.0.0.1:5001
+```
 
 # Technology and Tech Stack Used
 ## Web3
@@ -51,8 +62,9 @@ EVM - Ethereum Virtual Machine <br>
 HTML | CSS | JS - Programming Languasge <br>
 NodeJS - Web Server <br>
 
-# Smart Contract Deployed (Will be updated)
--
--
+# Smart Contract Address (Goerli)
+- Verification Contract : 0x084b9339660bAB21FDB9f436cb32870748B099c3
+- UserRegistration Contract : 0x1A3994f30F45aA9De2abe0Cbb71cdBaa75bFBcC5
 
 # Application Screenshot
+![image](https://github.com/tech-creed/TRINIT-TECHCREED-WEB3/assets/65155327/ba68af8f-5ac7-476d-a18a-279b5bc05943)
