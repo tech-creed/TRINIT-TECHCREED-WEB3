@@ -252,5 +252,38 @@ App = {
         } catch (error) {
           console.error("Error:", error);
         }
+      },
+      AddAchievement: async()=>{
+        await App.load();
+        data = {};
+        const form = document.getElementById("AddAchievementForm");
+
+        const formData = new FormData(form);
+
+        data["achievementName"] = document.getElementById("achievementName").value;
+        data["description"] = document.getElementById("description").value;
+
+        try {
+          const response = await fetch("/ipfs/achievement-upload", {
+            method: "POST",
+            body: formData,
+          });
+    
+          if (response.ok) {
+            const responseData = await response.json();
+            console.log("Response:", responseData);
+    
+            await App.contracts.portfolio.methods
+              .addProject(data["achievementName"],data["description"],responseData.AchievementFileURL)
+              .send({ from: App.account });
+    
+            alert("Your project file Uploaded Successfully");
+          } else {
+            alert("Failed to submit form");
+          }
+        } catch (error) {
+          console.error("Error:", error);
+        }
       }
 }
+

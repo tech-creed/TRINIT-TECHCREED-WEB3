@@ -77,11 +77,8 @@ const ipfsUpload = async (req, res) => {
 }
 
 const resumeUpload = async (req, res) => {
-    const { ownerName, tokenId } = req.body;
-    console.log(ownerName, tokenId);
-
     const { document } = req?.files ?? {};
-    console.log(`Uploading resume for [${ownerName}] to local IPFS server.`);
+    console.log(`Uploading resume into local IPFS server.`);
 
     try {
         if (!document) {
@@ -94,7 +91,7 @@ const resumeUpload = async (req, res) => {
 
         const resumeUrl = `http://localhost:8081/ipfs/${resumeCid}`;
 
-        res.json({ ownerName, tokenId, resumeUrl });
+        res.json({ resumeUrl });
     } catch (error) {
         console.log(`Problem while uploading resume to local IPFS server: ${error}`);
         return res.status(500).send({
@@ -104,11 +101,8 @@ const resumeUpload = async (req, res) => {
 }
 
 const ProjectFileUpload = async (req, res) => {
-    const { ownerName, tokenId } = req.body;
-    console.log(ownerName, tokenId);
-
     const { document } = req?.files ?? {};
-    console.log(`Uploading project file for [${ownerName}] to local IPFS server.`);
+    console.log(`Uploading project file into local IPFS server.`);
 
     try {
         if (!document) {
@@ -121,7 +115,7 @@ const ProjectFileUpload = async (req, res) => {
 
         const projectFileURL = `http://localhost:8081/ipfs/${projectFileCid}`;
 
-        res.json({ ownerName, tokenId, projectFileURL });
+        res.json({ projectFileURL });
     } catch (error) {
         console.log(`Problem while uploading project file to local IPFS server: ${error}`);
         return res.status(500).send({
@@ -130,4 +124,28 @@ const ProjectFileUpload = async (req, res) => {
     }
 }
 
-module.exports = { ipfsUpload,resumeUpload,ProjectFileUpload } 
+const AchievementFileUpload = async (req, res) => {
+    const { document } = req?.files ?? {};
+    console.log(`Uploading achievement file into local IPFS server.`);
+
+    try {
+        if (!document) {
+            return res.status(400).send({ message: 'Invalid input' });
+        }
+
+        const AchievementFileName = `${new Date().getTime()}_${document.name.replace(/ /g, '')}`;
+        const file = await fileFromPath(document, AchievementFileName);
+        const AchievementFileCid = await storeFiles(file);
+
+        const AchievementFileURL = `http://localhost:8081/ipfs/${AchievementFileCid}`;
+
+        res.json({ AchievementFileURL });
+    } catch (error) {
+        console.log(`Problem while uploading achievement file to local IPFS server: ${error}`);
+        return res.status(500).send({
+            message: 'Problem while uploading achievement file to local IPFS server'
+        });
+    }
+}
+
+module.exports = { ipfsUpload,resumeUpload,ProjectFileUpload,AchievementFileUpload } 
