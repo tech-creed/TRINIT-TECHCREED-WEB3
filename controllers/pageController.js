@@ -14,4 +14,8 @@ const verificationPage = async(req,res)=>{
     res.render('verification')
 }
 
-module.exports = {homePage, loginPage, registerPage, verificationPage}
+const profilePage = async(req,res)=>{
+    res.render('profile')
+}
+
+module.exports = {homePage, loginPage, registerPage, verificationPage, profilePage}

@@ -13,7 +13,7 @@ router.get("/register",pageController.registerPage)
 
 router.get("/verification",pageController.verificationPage)
 
-router.get("/profile",pageController.verificationPage)
+router.get("/profile",pageController.profilePage)
 
 
 module.exports = router
