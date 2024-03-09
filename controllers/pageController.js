@@ -18,4 +18,10 @@ const profilePage = async(req,res)=>{
     res.render('profile')
 }
 
-module.exports = {homePage, loginPage, registerPage, verificationPage, profilePage}
+const adminVerificationPage = async(req,res)=>{
+    res.render('platformVerification')
+}
+
+adminVerificationPage
+
+module.exports = {homePage, loginPage, registerPage, verificationPage, profilePage, adminVerificationPage}

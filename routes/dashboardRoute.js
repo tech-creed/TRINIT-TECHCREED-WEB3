@@ -15,5 +15,7 @@ router.get("/verification",pageController.verificationPage)
 
 router.get("/profile",pageController.profilePage)
 
+router.get("/adminVerification",pageController.adminVerificationPage)
+
 
 module.exports = router
