@@ -1,7 +1,11 @@
+
+  <image width=120px src="https://github.com/tech-creed/TRINIT-TECHCREED-WEB3/assets/65155327/1734e142-4307-44c0-9ffd-0b6a7c3c1d5e"></image>
+<image width=120px src="https://github.com/tech-creed/TRINIT-TECHCREED-WEB3/assets/65155327/70f0e1f5-f950-4e3c-9fee-dfb66198cd05"></image>
+
 # TRINIT-TECHCREED-WEB3
 Unlock Your Potential with Our Decentralized Talent Platform. Empowering artists, creators, developers, and professionals to showcase their skills, find opportunities, and collaborate without intermediaries. Join our decentralized community today and discover a world of endless possibilities.
 
-### Application Deployed Link - Will be Updated
+### Application Deployed Link - https://trinit-techcreed-web3.onrender.com
 ### Video Presentation Link - Will be Updated
 
 ## Problem Explored
