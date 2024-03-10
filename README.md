@@ -6,7 +6,7 @@
 Unlock Your Potential with Our Decentralized Talent Platform. Empowering artists, creators, developers, and professionals to showcase their skills, find opportunities, and collaborate without intermediaries. Join our decentralized community today and discover a world of endless possibilities.
 
 ### Application Deployed Link - https://trinit-techcreed-web3.onrender.com
-### Video Presentation Link - Will be Updated
+### Video Presentation Link - https://youtu.be/6pc2PrUXgTQ
 ### Drive Link - https://drive.google.com/drive/folders/1xSy-4m3KpaplzjDtnewu22OBOrldEvtO?usp=sharing
 
 # Smart Contract Deployed (Goerli testnet)
@@ -20,8 +20,7 @@ In the digital era, talent discovery and collaboration often face challenges suc
 Introducing a decentralized platform revolutionizing talent discovery and collaboration. Leveraging blockchain technology, We offers transparent, tamper-proof systems for identity management, portfolio showcase, and collaboration agreements. By tokenizing skills and contributions, users can receive fair compensation and incentives, fostering a vibrant ecosystem of collaboration. It empowers individuals to showcase their talents, connect with opportunities, and collaborate seamlessly in a secure, inclusive environment.
 
 ## Application Demo
-https://github.com/tech-creed/TRINIT-TECHCREED-WEB3/assets/65155327/02ad6e12-faef-4449-be21-4ee83a388e45
-
+https://github.com/tech-creed/TRINIT-TECHCREED-WEB3/assets/65155327/fc30833a-d2a8-4c71-b8dd-dbe267f1946e
 
 # Project Setup Procedure
 clone the repo to your local system,
@@ -60,16 +59,40 @@ IPFS Endpoint : 127.0.0.1:5001
 The IPFS will start in, 127.0.0.1:5001
 ```
 
+# Multi Chain Compatibility
+BSC-TESTNET:
+
+	1.IdentityVerification:
+		https://testnet.bscscan.com/address/0x06adae7477acbe878db7d1feeecb504779d0bbb3
+  
+	2.PortfolioContract:
+		https://testnet.bscscan.com/address/0x31819934f0e66b6da966c1163aa05fd5ce16326e
+  
+	3.UserRegistration:
+		https://testnet.bscscan.com/address/0xee4b262bb64b3808a69e14f3886fafc9fe11dd63
+  
+	4.CollaborationAgreement:
+		https://testnet.bscscan.com/address/0xc4f690e50b3cbeab3496091015dd1f39213ff439
+
+Mumbai Polygonscan-TESTNET:
+
+	1.IdentityVerification:
+		https://mumbai.polygonscan.com/address/0x31819934f0e66b6da966c1163aa05fd5ce16326e
+  
+	2.PortfolioContract:
+		https://mumbai.polygonscan.com/address/0xee4b262bb64b3808a69e14f3886fafc9fe11dd63
+  
+	3.UserRegistration:
+		https://mumbai.polygonscan.com/address/0xc4f690e50b3cbeab3496091015
+
 # Technology and Tech Stack Used
 ## Web3
 Solidity - Smart Contract <br>
 EVM - Ethereum Virtual Machine <br>
 HTML | CSS | JS - Programming Languasge <br>
 NodeJS - Web Server <br>
+IPFS Secure File System <br>
 
-# Smart Contract Address (Goerli)
-- Verification Contract : 0x084b9339660bAB21FDB9f436cb32870748B099c3
-- UserRegistration Contract : 0x1A3994f30F45aA9De2abe0Cbb71cdBaa75bFBcC5
 
 # Application Screenshot
 ![image](https://github.com/tech-creed/TRINIT-TECHCREED-WEB3/assets/65155327/ba68af8f-5ac7-476d-a18a-279b5bc05943)
