@@ -21,8 +21,16 @@ contract CollaborationAgreement is ERC20 {
 
     mapping(uint256 => Agreement) public agreements;
     uint256 public agreementCount;
+    uint256 public tokenPrice;
 
-    constructor() ERC20("SkillCollabToken", "SCT") {}
+    constructor() ERC20("SkillCollabToken", "SCT") {
+        tokenPrice = 1 ether;
+    }
+
+     function setTokenPrice(uint256 newPrice) external {
+        require(newPrice > 0, "Token price must be greater than zero");
+        tokenPrice = newPrice;
+    }
 
     function createAgreement(
         string memory terms,
@@ -37,8 +45,6 @@ contract CollaborationAgreement is ERC20 {
             collaborators: new address[](0),
             requiredTokens: requiredTokens
         });
-
-        _mint(msg.sender, requiredTokens);
     }
 
     function signAgreement(uint256 agreementId) external {
@@ -53,6 +59,28 @@ contract CollaborationAgreement is ERC20 {
         );
 
         agreements[agreementId].collaborators.push(msg.sender);
+    }
+
+    function buyTokens() external payable {
+        require(msg.value > 0, "Must send ETH to purchase tokens");
+
+        uint256 tokensPurchased = msg.value / tokenPrice;
+        require(tokensPurchased > 0, "Insufficient ETH sent to purchase tokens");
+
+        _mint(msg.sender, tokensPurchased);
+    }
+
+    function provideContributionTokens(uint256 agreementId, uint256 amount) external {
+        require(agreementId <= agreementCount && agreementId > 0, "Invalid agreement ID");
+        require(
+            agreements[agreementId].status == AgreementStatus.Active,
+            "Agreement is not active"
+        );
+        require(msg.sender == agreements[agreementId].creator, "Only the creator can contribute");
+
+        for (uint256 i = 0; i < agreements[agreementId].collaborators.length; i++) {
+            _transfer(agreements[agreementId].creator, agreements[agreementId].collaborators[i], amount);
+        }
     }
 
     function isCollaborator(uint256 agreementId, address user) internal view returns (bool) {
