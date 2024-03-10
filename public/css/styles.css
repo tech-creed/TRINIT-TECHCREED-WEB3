@@ -10,7 +10,7 @@
   }
   
   a {
-    color: #38c23a;
+    color: #081158;
     text-decoration: none;
   }
   
@@ -32,7 +32,7 @@
   /* Handle */
   
   ::-webkit-scrollbar-thumb {
-    background: linear-gradient(60deg, #38c23a, #2bec45);
+    background: linear-gradient(60deg, #081158, #2bec45);
     border-radius: 10px;
   }
   
@@ -63,7 +63,7 @@
     letter-spacing: 1px;
     font-weight: 700;
     margin: 0;
-    color: #38c23a;
+    color: #081158;
     text-transform: uppercase;
   }
   
@@ -144,7 +144,7 @@
     right: 15px;
     bottom: 15px;
     z-index: 99999;
-    background: #38c23a;
+    background: #081158;
     width: 40px;
     height: 40px;
     border-radius: 4px;
@@ -240,7 +240,7 @@
     font-family: "Nunito", sans-serif;
     font-size: 16px;
     font-weight: 700;
-    color: #018921;
+    color: #050b38;
     white-space: nowrap;
     transition: 0.3s;
   }
@@ -256,12 +256,12 @@
   .navbar .active,
   .navbar .active:focus,
   .navbar li:hover>a {
-    color: #38c23a;
+    color: #081158;
   }
   
   .navbar .getstarted,
   .navbar .getstarted:focus {
-    background: #38c23a;
+    background: #081158;
     padding: 8px 20px;
     margin-left: 30px;
     border-radius: 4px;
@@ -276,10 +276,10 @@
   
   .buy,
   .buy:focus {
-    background: #38c23a;
+    background: #081158;
     padding: 8px 20px;
     border-radius: 4px;
-    border-color: #38c23a;
+    border-color: #081158;
     color: #fff;
   }
   
@@ -323,7 +323,7 @@
   .navbar .dropdown ul a:hover,
   .navbar .dropdown ul .active:hover,
   .navbar .dropdown ul li:hover>a {
-    color: #38c23a;
+    color: #081158;
   }
   
   .navbar .dropdown:hover>ul {
@@ -422,7 +422,7 @@
   .navbar-mobile a:hover,
   .navbar-mobile .active,
   .navbar-mobile li:hover>a {
-    color: #38c23a;
+    color: #081158;
   }
   
   .navbar-mobile .getstarted,
@@ -457,7 +457,7 @@
   .navbar-mobile .dropdown ul a:hover,
   .navbar-mobile .dropdown ul .active:hover,
   .navbar-mobile .dropdown ul li:hover>a {
-    color: #38c23a;
+    color: #081158;
   }
   
   .navbar-mobile .dropdown>.dropdown-active {
@@ -494,7 +494,7 @@
     border-radius: 4px;
     transition: 0.5s;
     color: #fff;
-    background: #38c23a;
+    background: #081158;
     box-shadow: 0px 5px 30px rgba(65, 84, 241, 0.4);
   }
   
@@ -573,7 +573,7 @@
   .about h3 {
     font-size: 14px;
     font-weight: 700;
-    color: #38c23a;
+    color: #081158;
     text-transform: uppercase;
   }
   
@@ -594,7 +594,7 @@
     border-radius: 4px;
     transition: 0.5s;
     color: #fff;
-    background: #38c23a;
+    background: #081158;
     box-shadow: 0px 5px 25px rgba(65, 84, 241, 0.3);
   }
   
@@ -667,7 +667,7 @@
     font-size: 42px;
     line-height: 0;
     margin-right: 20px;
-    color: #38c23a;
+    color: #081158;
   }
   
   .counts .count-box span {
@@ -712,7 +712,7 @@
   }
   
   .features .feature-box:hover i {
-    background: #38c23a;
+    background: #081158;
     color: #fff;
   }
   
@@ -750,8 +750,8 @@
   }
   
   .features .feture-tabs .nav-link.active {
-    color: #38c23a;
-    border-bottom: 3px solid #38c23a;
+    color: #081158;
+    border-bottom: 3px solid #081158;
   }
   
   .features .feture-tabs .tab-content h4 {
@@ -765,7 +765,7 @@
     font-size: 24px;
     line-height: 0;
     margin-right: 8px;
-    color: #38c23a;
+    color: #081158;
   }
   
   .features .feature-icons {
@@ -897,20 +897,20 @@
   }
   
   .services .service-box.green {
-    border-bottom: 3px solid #08da4e;
+    border-bottom: 3px solid #081158;
   }
   
   .services .service-box.green .icon {
-    color: #08da4e;
+    color: #081158;
     background: #cffddf;
   }
   
   .services .service-box.green .read-more {
-    color: #08da4e;
+    color: #081158;
   }
   
   .services .service-box.green:hover {
-    background: #08da4e;
+    background: #081158;
   }
   
   .services .service-box.red {
@@ -1037,11 +1037,11 @@
     height: 12px;
     background-color: #fff;
     opacity: 1;
-    border: 1px solid #38c23a;
+    border: 1px solid #081158;
   }
   
   .testimonials .swiper-pagination .swiper-pagination-bullet-active {
-    background-color: #38c23a;
+    background-color: #081158;
   }
   
   .testimonials .swiper-slide {
@@ -1136,7 +1136,7 @@
     font-size: 16px;
     padding: 0 30px;
     margin: 3px;
-    background: #38c23a;
+    background: #081158;
     color: #fff;
     transition: 0.3s;
     border-radius: 4px;
@@ -1240,14 +1240,14 @@
   }
   
   .footer .footer-top .footer-links ul a {
-    color: #018921;
+    color: #081158;
     transition: 0.3s;
     display: inline-block;
     line-height: 1;
   }
   
   .footer .footer-top .footer-links ul a:hover {
-    color: #38c23a;
+    color: #081158;
   }
   
   .footer .footer-top .footer-contact p {
@@ -1257,14 +1257,14 @@
   .footer .copyright {
     text-align: center;
     padding-top: 30px;
-    color: #017013;
+    color: #081158;
   }
   
   .footer .credits {
     padding-top: 10px;
     text-align: center;
     font-size: 13px;
-    color: #017013;
+    color: #081158;
   }
   
   .img-fluid{
