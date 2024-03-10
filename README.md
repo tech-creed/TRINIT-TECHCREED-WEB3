@@ -7,6 +7,7 @@ Unlock Your Potential with Our Decentralized Talent Platform. Empowering artists
 
 ### Application Deployed Link - https://trinit-techcreed-web3.onrender.com
 ### Video Presentation Link - Will be Updated
+### Drive Link - https://drive.google.com/drive/folders/1xSy-4m3KpaplzjDtnewu22OBOrldEvtO?usp=sharing
 
 # Smart Contract Deployed (Goerli testnet)
 - Verification Smart COntract : https://goerli.etherscan.io/address/0x084b9339660bAB21FDB9f436cb32870748B099c3
@@ -17,6 +18,10 @@ In the digital era, talent discovery and collaboration often face challenges suc
 
 ## Solution Developed
 Introducing a decentralized platform revolutionizing talent discovery and collaboration. Leveraging blockchain technology, We offers transparent, tamper-proof systems for identity management, portfolio showcase, and collaboration agreements. By tokenizing skills and contributions, users can receive fair compensation and incentives, fostering a vibrant ecosystem of collaboration. It empowers individuals to showcase their talents, connect with opportunities, and collaborate seamlessly in a secure, inclusive environment.
+
+## Application Demo
+https://github.com/tech-creed/TRINIT-TECHCREED-WEB3/assets/65155327/02ad6e12-faef-4449-be21-4ee83a388e45
+
 
 # Project Setup Procedure
 clone the repo to your local system,
