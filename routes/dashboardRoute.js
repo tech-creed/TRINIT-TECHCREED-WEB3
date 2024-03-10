@@ -17,6 +17,10 @@ router.get("/profile",pageController.profilePage)
 
 router.get("/adminVerification",pageController.adminVerificationPage)
 
+router.get("/collaboration",pageController.CollaborationPage)
+
+router.get("/community",pageController.CommunityPage)
+
 router.get("/publicProfilePage/:wallet",pageController.publicProfilePage)
 
 

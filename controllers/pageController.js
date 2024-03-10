@@ -26,6 +26,14 @@ const publicProfilePage = async(req,res)=>{
     res.render('publicProfile',{walletID:req.params.wallet})
 }
 
-adminVerificationPage
+const CollaborationPage = async(req,res)=>{
+    res.render('collaboration')
+}
 
-module.exports = {homePage, loginPage, registerPage, verificationPage, profilePage, adminVerificationPage, publicProfilePage}
+const CommunityPage = async(req,res)=>{
+    res.render('community')
+}
+
+
+
+module.exports = {homePage, loginPage, registerPage, verificationPage, profilePage, adminVerificationPage, publicProfilePage, CollaborationPage, CommunityPage}

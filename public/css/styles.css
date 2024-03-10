@@ -73,7 +73,7 @@
     font-size: 38px;
     line-height: 42px;
     font-weight: 700;
-    color: #017013;
+    color: #081158;
   }
   
   @media (max-width: 768px) {
@@ -88,7 +88,7 @@
   --------------------------------------------------------------*/
   .breadcrumbs {
     padding: 15px 0;
-    background: #017013;
+    background: #081158;
     min-height: 40px;
     margin-top: 82px;
     color: #fff;
@@ -204,7 +204,7 @@
     font-size: 30px;
     font-weight: 700;
     letter-spacing: 1px;
-    color: #017013;
+    color: #081158;
     font-family: "Nunito", sans-serif;
     margin-top: 3px;
   }
@@ -359,7 +359,7 @@
   * Mobile Navigation 
   */
   .mobile-nav-toggle {
-    color: #017013;
+    color: #081158;
     font-size: 28px;
     cursor: pointer;
     display: none;
@@ -416,7 +416,7 @@
   .navbar-mobile a:focus {
     padding: 10px 20px;
     font-size: 15px;
-    color: #017013;
+    color: #081158;
   }
   
   .navbar-mobile a:hover,
@@ -478,7 +478,7 @@
     margin: 0;
     font-size: 38px;
     font-weight: 700;
-    color: #017013;
+    color: #081158;
   }
   
   .hero h2 {
@@ -580,7 +580,7 @@
   .about h2 {
     font-size: 24px;
     font-weight: 700;
-    color: #017013;
+    color: #081158;
   }
   
   .about p {
@@ -634,7 +634,7 @@
   
   .values .box h3 {
     font-size: 24px;
-    color: #017013;
+    color: #081158;
     font-weight: 700;
     margin-bottom: 18px;
   }
@@ -696,7 +696,7 @@
   
   .features .feature-box h3 {
     font-size: 18px;
-    color: #017013;
+    color: #081158;
     font-weight: 700;
     margin: 0;
   }
@@ -721,7 +721,7 @@
   }
   
   .features .feture-tabs h3 {
-    color: #017013;
+    color: #081158;
     font-weight: 700;
     font-size: 32px;
     margin-bottom: 10px;
@@ -742,7 +742,7 @@
     text-transform: uppercase;
     font-size: 15px;
     font-weight: 600;
-    color: #017013;
+    color: #081158;
     padding: 12px 0;
     margin-right: 25px;
     margin-bottom: -2px;
@@ -758,7 +758,7 @@
     font-size: 18px;
     margin: 0;
     font-weight: 700;
-    color: #017013;
+    color: #081158;
   }
   
   .features .feture-tabs .tab-content i {
@@ -773,7 +773,7 @@
   }
   
   .features .feature-icons h3 {
-    color: #017013;
+    color: #081158;
     font-weight: 700;
     font-size: 32px;
     margin-bottom: 20px;
@@ -794,7 +794,7 @@
     font-size: 20px;
     font-weight: 700;
     margin: 0 0 10px 0;
-    color: #017013;
+    color: #081158;
   }
   
   .features .feature-icons .content .icon-box i {
@@ -1108,7 +1108,7 @@
     padding: 0;
     line-height: 1;
     font-weight: 700;
-    color: #017013;
+    color: #081158;
   }
   
   .footer .footer-newsletter form {
@@ -1178,7 +1178,7 @@
     font-size: 30px;
     font-weight: 700;
     letter-spacing: 1px;
-    color: #017013;
+    color: #081158;
     font-family: "Nunito", sans-serif;
     margin-top: 3px;
   }
@@ -1200,13 +1200,13 @@
   }
   
   .footer .footer-top .social-links a:hover {
-    color: #017013;
+    color: #081158;
   }
   
   .footer .footer-top h4 {
     font-size: 16px;
     font-weight: bold;
-    color: #017013;
+    color: #081158;
     text-transform: uppercase;
     position: relative;
     padding-bottom: 12px;
