@@ -65,21 +65,21 @@ App = {
     loadContracts: async () => {
       // users ABI
       const UserContract = await $.getJSON("/contracts/UserRegistration.json");
-      const contractAddress = "0x06029a4FdAf652edBD8c15d2A0D5312C4f430DAf";
+      const contractAddress = "0x5296B22c0993D8124DabB7D876D18A152f4207E9";
       App.contracts.user = new web3.eth.Contract(
         UserContract.abi,
         contractAddress
       );
 
       const IDVerifyContract = await $.getJSON("/contracts/IdentityVerification.json");
-      const IDVerifyContractAdd = "0x722D203550D38CFCD8B23F1123DaC51418FE78A7";
+      const IDVerifyContractAdd = "0x2749171F26a555B6a4be67A487380DfEf13a9F61";
       App.contracts.verify = new web3.eth.Contract(
         IDVerifyContract.abi,
         IDVerifyContractAdd
       );
 
       const ProtfolioContract = await $.getJSON("/contracts/PortfolioContract.json");
-      const ProtfolioContractAdd = "0xf13fA75676c162663327f61E1791D56dd0F2FC91";
+      const ProtfolioContractAdd = "0xcb28480618b6B4943E2Ca212Ea7214DD90591191";
       App.contracts.portfolio = new web3.eth.Contract(
         ProtfolioContract.abi,
         ProtfolioContractAdd
