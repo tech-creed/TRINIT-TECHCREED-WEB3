@@ -96,3 +96,16 @@ IPFS Secure File System <br>
 
 # Application Screenshot
 ![image](https://github.com/tech-creed/TRINIT-TECHCREED-WEB3/assets/65155327/ba68af8f-5ac7-476d-a18a-279b5bc05943)
+
+![image](https://github.com/tech-creed/TRINIT-TECHCREED-WEB3/assets/65155327/70f97c07-dfbb-47e9-9817-fb526ec972c5)
+
+![image](https://github.com/tech-creed/TRINIT-TECHCREED-WEB3/assets/65155327/df99f62d-ddb9-461f-b50b-4fd935a54cfc)
+
+![image](https://github.com/tech-creed/TRINIT-TECHCREED-WEB3/assets/65155327/cc3f9843-8cf9-4e12-851a-8f3c98ec6a84)
+
+![image](https://github.com/tech-creed/TRINIT-TECHCREED-WEB3/assets/65155327/bee588d0-b15d-4d9c-b043-d53a5d1eed0a)
+
+![image](https://github.com/tech-creed/TRINIT-TECHCREED-WEB3/assets/65155327/0080dab6-a585-433a-a127-45fdcb2fd7fd)
+
+![image](https://github.com/tech-creed/TRINIT-TECHCREED-WEB3/assets/65155327/e2daac72-80c1-43be-9fbc-d4be39823b21)
+
